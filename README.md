@@ -25,6 +25,8 @@ Optional reproducible *selected* mutation experiment (temporary copies only):
 python3 tools/check_mutations.py
 ```
 
+Run the supplemental mutation sample with `python3 tools/check_mutations.py --supplemental`.
+
 To launch an HTTP API interactively (not needed for automated tests):
 
 ```bash
@@ -49,16 +51,18 @@ Open `http://127.0.0.1:8000/docs` for FastAPI's interactive documentation. API t
 |---|---|---|
 | Unit | `tests/test_cart_unit.py`, `tests/test_cart_edge_cases.py` | Discount logic, boundaries, negative values, rounding, metamorphic relations |
 | API | `tests/test_checkout_api.py`, `tests/test_api_edge_cases.py` | HTTP status, JSON/schema validation, 4 response fields |
+| Unit and API | `tests/test_ai_candidates.py` | Eight reviewed Option A cases for discount interactions, rounding, boundaries, and JSON parsing |
 
 Black-box techniques include **equivalence partitioning, boundary value analysis and decision tables**. See `docs/TEST_REQUIREMENTS_MATRIX.md` for exact traceability, `docs/LAB3_DEMO_AND_ORAL_QA.md` for explanations, and `docs/CHANGELOG_REVIEW.md` for changes versus the starter.
 
 ## 4. Measured evidence and limits
 
-See `docs/PROGRESS_REVIEWED_2026-11-13.md` for the dated, environment-specific evidence and `docs/SELECTED_MUTATION_RESULTS.md` for a deliberately small mutation sample. A high coverage percentage is **not** proof of correctness. Rerun everything on your own machine and after each change.
+On Python 3.12.14 the combined suite passed **73 tests** (50 unit and 23 API). It covered 69/71 statements and 24/24 branches. The coverage tool displays 98% when it combines both counts. The suite killed all nine historical selected mutants and all three supplemental ones. These figures apply to the [measured groups and selected changes](docs/ai-experiment/results.md).
 
-## 5. Course milestones
+## 5. Option A experiment
 
-- **Lab 3 (originally Fri 20 Nov 2026):** show at least 10 running automated tests. See `docs/LAB3_CHECKLIST.md`.
-- **Final (Fri 11 Dec 2026 23:59):** deliver GitHub link and **8–12 page PDF** in required report template, with at least 20 tests, two test levels, two test-design techniques and a validated AI testing element.
+An isolated ChatGPT generation from the written specification produced 18 candidates. Review kept seven, adapted one to check a coupon-rounding tie, and rejected ten that overlapped with existing checks. The baseline was already AI-assisted. The adapted case killed a coupon-only rounding mutant that survived both the baseline and the raw candidates.
 
-**AI evaluation is NOT finished.** Initial implementation, baseline tests and review improvements were drafted with AI assistance. The final project still needs an independently reviewed AI-test generation experiment, evidence of kept/fixed/rejected candidates and real baseline-versus-AI comparisons. See `docs/AI_EVALUATION_PLAN.md` and `docs/AI_USAGE_DRAFT.md`. Do not claim that AI-authored starter tests were manually authored.
+- [Exact prompt](docs/ai-experiment/prompt.md) and [raw model response](docs/ai-experiment/raw_response.md)
+- [Per-candidate review](docs/ai-experiment/review.md)
+- [Coverage, mutation comparison, and reproduction commands](docs/ai-experiment/results.md)

@@ -1,5 +1,7 @@
 # AI test validation plan — upcoming work (NOT completed yet)
 
+Historical planning snapshot. See the [completed experiment](ai-experiment/results.md) and [candidate decisions](ai-experiment/review.md) for current evidence.
+
 ## Official expectation
 
 Project brief #35 suggests **Option A: LLM-generated decision-table tests, validated**. A strong final submission shows the actual prompts, test candidates accepted/fixed/rejected and why, and a careful empirical comparison using coverage and mutation results.
