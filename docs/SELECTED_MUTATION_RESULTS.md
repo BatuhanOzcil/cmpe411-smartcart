@@ -1,6 +1,6 @@
 # Selected mutation test experiment — 13 November 2026
 
-Command: `python3 tools/check_mutations.py` from the project root. Each mutation is applied to an isolated **temporary copy** and the whole 65-test suite is rerun. The original source is **not modified**. This is an illustrative *selected set*, not a complete mutmut/cosmic-ray run.
+Historical 65-test checkpoint. Run `python3 tools/check_mutations.py` from the project root at the [frozen source revision](https://github.com/BatuhanOzcil/cmpe411-smartcart/tree/1d8be2f4eb1ce99439d24aafefd3d833ff145dfb) to reproduce this run. The script applies each of the nine selected changes in a separate temporary copy.
 
 | Mutant | Source change | Result | Why useful? |
 |---|---|---|---|
@@ -18,4 +18,4 @@ Command: `python3 tools/check_mutations.py` from the project root. Each mutation
 
 **Limitations:** These nine mutations were chosen deliberately, mostly to target existing high-value tests. No claim is made that all possible mutants are killed or that full code mutation coverage is 100%. Some mutants can be *equivalent* and impossible to distinguish; those need separate analysis. Full source-wide mutation analysis is not included in this checkpoint.
 
-**AI evaluation distinction:** This experiment tests the current combined AI-assisted suite. It does **not** by itself compare a separately manually authored baseline with accepted LLM-generated test candidates. That comparison remains work for the final project.
+The [completed Option A comparison](ai-experiment/results.md) reports these nine selected changes and three supplemental changes for the AI-assisted baseline, reviewed additions, and combined suite.

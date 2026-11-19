@@ -1,6 +1,6 @@
 # Verified progress — 13 November 2026, reviewed package
 
-This document describes a **real run in the preparation environment** (Linux, Python 3.13.5, pytest 9.0.2, FastAPI 0.128.2). It does **not** claim the updated package has been run on the student's Mac or pushed to GitHub.
+This historical checkpoint records a run in the preparation environment (Linux, Python 3.13.5, pytest 9.0.2, FastAPI 0.128.2). To reproduce the 65-test checkpoint, use the [frozen source revision](https://github.com/BatuhanOzcil/cmpe411-smartcart/tree/1d8be2f4eb1ce99439d24aafefd3d833ff145dfb).
 
 ## Reproducible commands
 
@@ -24,11 +24,6 @@ python3 tools/check_mutations.py
 - Techniques: decision table, equivalence partitioning, boundary value analysis and metamorphic relations.
 - Chosen guardrails: max price 1,000,000 TL, 10,000 units per line, 100 cart lines (our policy, not an instructor requirement).
 
-## Lab 3 / final status
+## Final evaluation
 
-- Original Lab 3 date: **Friday 20 November**. The brief requests at least **10 running tests**, in lab, marked as a progress check and not a standalone graded task, but progress is mentioned in the 5-point milestones rubric. Remote attendance/demonstration needs instructor approval.
-- Final due **11 December 23:59**: repo link + 8–12-page PDF template report. The AI-generated test validation experiment, human confirmation and full report are not yet complete.
-
-## Important provenance
-
-Initial code/tests and review improvements were generated with AI assistance. These results are based on actual automated runs, but **human validation of test oracles and requirements by the student is still necessary**. Do not describe these as independently manually authored tests or as a completed AI comparative study.
+The initial code, tests, and review improvements used AI assistance. The [completed Option A experiment](ai-experiment/results.md) compares this baseline with the reviewed candidates and the combined suite.

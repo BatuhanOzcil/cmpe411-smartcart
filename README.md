@@ -1,8 +1,10 @@
 # SmartCart v1.1 — CMPE 411 Term Project #35
 
-A small Python shopping cart and discount calculation system. **The main objective is specification-based software testing, not a complete e-commerce website.**
+A small Python shopping cart and discount engine for specification-based software testing.
 
 ## 1. Install and run (Python 3.11 or newer)
+
+From the repository root, run:
 
 ```bash
 python3 -m venv .venv
@@ -53,7 +55,7 @@ Open `http://127.0.0.1:8000/docs` for FastAPI's interactive documentation. API t
 | API | `tests/test_checkout_api.py`, `tests/test_api_edge_cases.py` | HTTP status, JSON/schema validation, 4 response fields |
 | Unit and API | `tests/test_ai_candidates.py` | Eight reviewed Option A cases for discount interactions, rounding, boundaries, and JSON parsing |
 
-Black-box techniques include **equivalence partitioning, boundary value analysis and decision tables**. See `docs/TEST_REQUIREMENTS_MATRIX.md` for exact traceability, `docs/LAB3_DEMO_AND_ORAL_QA.md` for explanations, and `docs/CHANGELOG_REVIEW.md` for changes versus the starter.
+Black-box techniques include **equivalence partitioning, boundary value analysis and decision tables**. See the [requirements-to-tests matrix](docs/TEST_REQUIREMENTS_MATRIX.md) for case-level traceability. The [13 November review](docs/CHANGELOG_REVIEW.md) records changes made before the Option A experiment.
 
 ## 4. Measured evidence and limits
 
@@ -65,4 +67,7 @@ An isolated ChatGPT generation from the written specification produced 18 candid
 
 - [Exact prompt](docs/ai-experiment/prompt.md) and [raw model response](docs/ai-experiment/raw_response.md)
 - [Per-candidate review](docs/ai-experiment/review.md)
-- [Coverage, mutation comparison, and reproduction commands](docs/ai-experiment/results.md)
+- [Protocol and frozen revision](docs/ai-experiment/protocol.md)
+- [Coverage, mutation comparison, and reproduction commands](docs/ai-experiment/results.md), with [measured output](docs/ai-experiment/measured-output.txt) and [package versions](docs/ai-experiment/environment.txt)
+
+ChatGPT assisted with the implementation and baseline tests. ChatGPT in Codex assisted with candidate generation and review, the adapted case, the mutation runner, and the report. The recorded checks use the frozen requirements, automated test runs, and selected mutations.

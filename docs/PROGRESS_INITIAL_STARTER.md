@@ -8,13 +8,10 @@ The first version was executed and verified in the preparation environment. Thes
 - Test techniques: **decision table**, **equivalence partitioning**, **boundary value analysis** (499.99 / 500.00 / 500.01).
 - Project checkpoint: at least 10 running tests on **20 Nov**, original published schedule. This code exceeds that number in the preparation environment.
 
-## Still not done
+## Work that followed this snapshot
 
-- Run and verify on the student's own Mac, then push to a new GitHub repository.
-- Perform **independent** LLM test-generation, preserve prompts and candidates, document keep/fix/reject decisions, compare tests using real mutation outcomes.
-- Final report according to the instructor's report template, PDF 8–12 pages, due **11 Dec 23:59**.
-- Confirm any updated dates or Lab 2 make-up announcements on Learn.
+The [13 November reviewed package](PROGRESS_REVIEWED_2026-11-13.md) expanded the suite to 65 passing tests. The [completed Option A experiment](ai-experiment/results.md) records the isolated generation run and the final comparison with 73 passing tests in the combined suite.
 
 ## Authorship and evaluation honesty
 
-Starter code and tests were prepared with AI assistance. Human review by the student is required; do not claim tests were independently authored or AI validation completed. Project focus is correctness and critical testing analysis, not just the number of passing tests.
+The starter code and tests were prepared with AI assistance. The results on this page describe the starter snapshot only.
